@@ -1,0 +1,9 @@
+*.exe
+*.pdb
+GeneratedFiles/
+*.opensdf
+*.sdf
+[Dd]ebug/
+[Rr]elease/
+*.suo
+*.user
