@@ -18,3 +18,7 @@ SOURCES += src\main.cpp\
 HEADERS  += src\mainwindow.h
 
 FORMS    += src\mainwindow.ui
+
+
+TRANSLATIONS += LuaSkillsForQSGSIndex.ts
+

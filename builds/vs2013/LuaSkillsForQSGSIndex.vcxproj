@@ -323,6 +323,9 @@
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_mainwindow.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LuaSkillsForQSGSIndex.ts" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
   <ProjectExtensions>
