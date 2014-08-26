@@ -13,6 +13,9 @@
     <ClCompile Include="..\..\src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\skill_translator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\src\mainwindow.ui">
@@ -47,6 +50,9 @@
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_mainwindow.h">
       <Filter>GeneratedFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\skill_translator.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
