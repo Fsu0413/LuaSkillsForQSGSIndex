@@ -5,16 +5,10 @@
 #include <QHash>
 
 
-class SkillTranslator {
-public:
+namespace SkillTranslator {
     static QString translate(const QString &from);
     static void insertTranslationPair(const QString &from, const QString &to);
     
-private:
-    SkillTranslator();
-    SkillTranslator(const SkillTranslator &);
-    
-private:
     static QHash<QString, QString> translations;
 };
 
