@@ -12,12 +12,19 @@ TARGET = LuaSkillsForQSGSIndex
 TEMPLATE = app
 
 
-SOURCES += src\main.cpp\
-        src\mainwindow.cpp
+SOURCES += \
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/garbage.cpp \
+    src/skill_translator.cpp
 
-HEADERS  += src\mainwindow.h
+HEADERS  += \
+    src/mainwindow.h \
+    src/garbage.h \
+    src/skill_translator.h
 
-FORMS    += src\mainwindow.ui
+FORMS    += \
+    src/mainwindow.ui
 
 
 TRANSLATIONS += LuaSkillsForQSGSIndex.ts

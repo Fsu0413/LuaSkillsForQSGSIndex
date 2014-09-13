@@ -2,10 +2,9 @@
 #include <QApplication>
 #include <QTranslator>
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
+int main(int argc, char *argv[]) {
 
+    QApplication a(argc, argv);
 
     QTranslator qt_translator;
     qt_translator.load("qt_zh_CN.qm");

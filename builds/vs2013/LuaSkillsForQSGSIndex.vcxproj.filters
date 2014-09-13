@@ -16,12 +16,24 @@
     <ClCompile Include="..\..\src\skill_translator.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\garbage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_garbage.cpp">
+      <Filter>GeneratedFiles\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_garbage.cpp">
+      <Filter>GeneratedFiles\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\src\mainwindow.ui">
       <Filter>ui</Filter>
     </CustomBuild>
     <CustomBuild Include="..\..\src\mainwindow.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\garbage.h">
       <Filter>src</Filter>
     </CustomBuild>
   </ItemGroup>
