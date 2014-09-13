@@ -25,6 +25,9 @@ fuwan qun
 -moukui
 xiahouba shu
 -baobian
+-tiaoxin[jiangwei]
+-paoxiao[zhangfei]
+-shensu[xiahouyuan]
 chenlin wei
 -bifa
 -songci

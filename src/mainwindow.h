@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "garbage.h"
+#include <QListWidget>
 
 namespace Ui {
 class MainWindow;
@@ -19,6 +20,8 @@ public:
 private:
     Ui::MainWindow *ui;
 
+private slots:
+    void skillUpdate(QListWidgetItem *current, QListWidgetItem *previous);
 };
 
 #endif // MAINWINDOW_H

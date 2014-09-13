@@ -20,26 +20,6 @@
    <string>LuaSkillsForQSGSIndex</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QListView" name="lstClass">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>80</y>
-      <width>371</width>
-      <height>481</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QListView" name="lstSkills">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>80</y>
-      <width>371</width>
-      <height>481</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btnSortByFirstLetter">
     <property name="geometry">
      <rect>
@@ -77,6 +57,26 @@
     </property>
     <property name="text">
      <string>Display Code</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lstClass">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>371</width>
+      <height>481</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lstSkill">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>80</y>
+      <width>371</width>
+      <height>481</height>
+     </rect>
     </property>
    </widget>
   </widget>

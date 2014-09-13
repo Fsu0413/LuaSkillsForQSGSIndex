@@ -8,3 +8,4 @@ GeneratedFiles/
 *.suo
 *.user
 *.qm
+Qt5*.dll

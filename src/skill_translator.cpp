@@ -1,6 +1,6 @@
 #include "skill_translator.h"
 
-QHash<QString, QString> SkillTranslator::translations;
+//QHash<QString, QString> SkillTranslator::translations;
 
 QString SkillTranslator::translate(const QString &from) {
     return translations.value(from, "N/A");
