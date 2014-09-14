@@ -34,29 +34,32 @@ void MainWindow::skillUpdate(QListWidgetItem *currentItem, QListWidgetItem *) {
 }
 
 void MainWindow::showSkill(bool) {
-    QString currentSkill = ui->lstSkill->currentItem()->text();
-    QString currentGeneral = ui->lstClass->currentItem()->text();
+    QListWidgetItem *currentItem = ui->lstSkill->currentItem();
+    if (currentItem != NULL) {
+        QString currentSkill = currentItem->text();
+        QString currentGeneral = ui->lstClass->currentItem()->text();
 
-    const Garbage &garbage = *Garbage::getInstance();
-    const General *general = garbage.getGeneral(currentGeneral);
-    if (general != NULL) {
-        QString skill_owner = general->getSkillOwner(currentSkill);
-        if (skill_owner != currentGeneral)
-            general = garbage.getGeneral(skill_owner);
-
+        const Garbage &garbage = *Garbage::getInstance();
+        const General *general = garbage.getGeneral(currentGeneral);
         if (general != NULL) {
-            QString package = general->getPackage();
-            QString file_name = "skills/" + package + "/" + skill_owner + "_" + currentSkill + ".lua";
-            QFile file(file_name);
-            if (file.exists())
-                (new CodeDialog(file, this))->show();
-            else
-                QMessageBox::critical(this, tr("Error"), QString(tr("Cannot read file %1")).arg(file_name));
+            QString skill_owner = general->getSkillOwner(currentSkill);
+            if (skill_owner != currentGeneral)
+                general = garbage.getGeneral(skill_owner);
 
-            return;
+            if (general != NULL) {
+                QString package = general->getPackage();
+                QString file_name = "skills/" + package + "/" + skill_owner + "_" + currentSkill + ".lua";
+                QFile file(file_name);
+                if (file.exists())
+                    (new CodeDialog(file, this))->show();
+                else
+                    QMessageBox::critical(this, tr("Error"), QString(tr("Cannot read file %1")).arg(file_name));
+
+                return;
+            }
         }
+        QMessageBox::critical(this, tr("Error"), tr("Unknown Error"));
     }
-    QMessageBox::critical(this, tr("Error"), tr("Unknown Error"));
 }
 
 MainWindow::~MainWindow() {
