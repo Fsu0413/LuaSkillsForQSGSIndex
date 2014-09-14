@@ -33,7 +33,7 @@ Garbage::Garbage() {
         }
     }
 
-    //connect(qApp, &QApplication::aboutToQuit, &Garbage::deleteLater); //causes crash, reason unknown
+    connect(qApp, &QApplication::aboutToQuit, this, &Garbage::deleteLater);
 }
 
 Package::Package(const QString &name, Garbage *garbage) {
