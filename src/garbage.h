@@ -9,7 +9,7 @@
 class Package;
 class General;
 
-class Garbage : public QObject{
+class Garbage : public QObject {
     Q_OBJECT
 
 public:
@@ -29,7 +29,7 @@ private:
     static Garbage *instance;
 };
 
-class Package : public QObject{
+class Package : public QObject {
     Q_OBJECT
 
 public:
@@ -42,7 +42,7 @@ private:
 
 };
 
-class General : public QObject{
+class General : public QObject {
     Q_OBJECT
 
 public:
@@ -52,6 +52,8 @@ public:
     void insertSkill(const QString &name, const QString &original_owner = QString());
     QStringList getSkills() const;
     QString getSkillOwner(const QString &skill) const;
+
+    QString getPackage() const;
 
 private:
     General(const General &);

@@ -14,8 +14,10 @@ Garbage *Garbage::getInstance() {
 }
 
 void Garbage::destroyInstancce() {
-    if (instance != NULL)
+    if (instance != NULL) {
         delete instance;
+        instance = NULL;
+    }
 }
 
 Garbage::Garbage() {
@@ -31,7 +33,7 @@ Garbage::Garbage() {
         }
     }
 
-    connect(qApp, &QApplication::aboutToQuit, &Garbage::deleteLater);
+    //connect(qApp, &QApplication::aboutToQuit, &Garbage::deleteLater); //causes crash, reason unknown
 }
 
 Package::Package(const QString &name, Garbage *garbage) {
@@ -107,9 +109,14 @@ void General::insertSkill(const QString &name, const QString &original_owner) {
     else
         other_owner_skills.insert(name, original_owner);
 }
+
 QString General::getSkillOwner(const QString &skill) const{
     if (skills.contains(skill))
         return objectName();
     else
         return other_owner_skills.value(skill, "");
+}
+
+QString General::getPackage() const{
+    return parent()->objectName();
 }

@@ -2,10 +2,10 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="GeneratedFiles\Debug\moc_mainwindow.cpp">
-      <Filter>GeneratedFiles\Debug</Filter>
+      <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_mainwindow.cpp">
-      <Filter>GeneratedFiles\Release</Filter>
+      <Filter>Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\mainwindow.cpp">
       <Filter>src</Filter>
@@ -20,10 +20,22 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_garbage.cpp">
-      <Filter>GeneratedFiles\Debug</Filter>
+      <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_garbage.cpp">
-      <Filter>GeneratedFiles\Release</Filter>
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\CodeDialog.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CodeDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CodeDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\syntaxhighlighter.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -36,17 +48,14 @@
     <CustomBuild Include="..\..\src\garbage.h">
       <Filter>src</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\..\src\CodeDialog.ui">
+      <Filter>ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\CodeDialog.h">
+      <Filter>src</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="GeneratedFiles">
-      <UniqueIdentifier>{2ef6fa14-5a79-4d22-9f10-1704b4bcd268}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GeneratedFiles\Debug">
-      <UniqueIdentifier>{475d6e30-f832-45dd-ae90-ebddbc4f8544}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GeneratedFiles\Release">
-      <UniqueIdentifier>{639738cd-4c92-4ff1-90b5-58dd08f70b9a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{8796e3da-216b-4e53-a20f-0b29f9aa31b4}</UniqueIdentifier>
     </Filter>
@@ -58,12 +67,27 @@
       <Extensions>ts</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{2ef6fa14-5a79-4d22-9f10-1704b4bcd268}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{475d6e30-f832-45dd-ae90-ebddbc4f8544}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{639738cd-4c92-4ff1-90b5-58dd08f70b9a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_mainwindow.h">
-      <Filter>GeneratedFiles</Filter>
+      <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\skill_translator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_CodeDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\syntaxhighlighter.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

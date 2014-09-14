@@ -16,15 +16,20 @@ SOURCES += \
     src/main.cpp \
     src/mainwindow.cpp \
     src/garbage.cpp \
-    src/skill_translator.cpp
+    src/skill_translator.cpp \
+    src/CodeDialog.cpp \
+    src/syntaxhighlighter.cpp
 
 HEADERS  += \
     src/mainwindow.h \
     src/garbage.h \
-    src/skill_translator.h
+    src/skill_translator.h \
+    src/CodeDialog.h \
+    src/syntaxhighlighter.h
 
 FORMS    += \
-    src/mainwindow.ui
+    src/mainwindow.ui \
+    src/CodeDialog.ui
 
 
 TRANSLATIONS += LuaSkillsForQSGSIndex.ts

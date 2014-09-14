@@ -6,11 +6,10 @@
 #include <QListWidget>
 
 namespace Ui {
-class MainWindow;
+    class MainWindow;
 }
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
@@ -22,6 +21,7 @@ private:
 
 private slots:
     void skillUpdate(QListWidgetItem *current, QListWidgetItem *previous);
+    void showSkill(bool);
 };
 
 #endif // MAINWINDOW_H

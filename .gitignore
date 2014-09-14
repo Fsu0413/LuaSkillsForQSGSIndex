@@ -9,3 +9,4 @@ GeneratedFiles/
 *.user
 *.qm
 Qt5*.dll
+*.ilk
