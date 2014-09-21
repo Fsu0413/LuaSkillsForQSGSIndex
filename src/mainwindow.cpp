@@ -3,6 +3,7 @@
 #include "ui_mainwindow.h"
 #include "garbage.h"
 #include "CodeDialog.h"
+#include "skill_translator.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -11,15 +12,19 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
     const Garbage &garbage = *Garbage::getInstance();
     
-    foreach (const General *general, garbage.getGenerals())
-        ui->lstClass->addItem(general->objectName());
+    foreach (const General *general, garbage.getGenerals()) {
+        QListWidgetItem *item = new QListWidgetItem;
+        item->setData(Qt::UserRole + 1, general->objectName());
+        item->setText(SkillTranslator::translate(general->objectName()));
+        ui->lstClass->addItem(item);
+    }
     
     connect(ui->lstClass, &QListWidget::currentItemChanged, this, &MainWindow::skillUpdate);
     connect(ui->btnDisplayCode, &QPushButton::clicked, this, &MainWindow::showSkill);
 }
 
 void MainWindow::skillUpdate(QListWidgetItem *currentItem, QListWidgetItem *) {
-    QString current = currentItem->text();
+    QString current = currentItem->data(Qt::UserRole + 1).toString();
 
     const Garbage &garbage = *Garbage::getInstance();
     const General *general = garbage.getGeneral(current);
@@ -27,8 +32,12 @@ void MainWindow::skillUpdate(QListWidgetItem *currentItem, QListWidgetItem *) {
         while (ui->lstSkill->count() != 0)
             delete ui->lstSkill->takeItem(0);
 
-        foreach (QString skill, general->getSkills())
-            ui->lstSkill->addItem(skill);
+        foreach (QString skill, general->getSkills()) {
+            QListWidgetItem *item = new QListWidgetItem;
+            item->setData(Qt::UserRole + 1, skill);
+            item->setText(SkillTranslator::translate(skill));
+            ui->lstSkill->addItem(item);
+        }
     }
 
 }
@@ -36,8 +45,8 @@ void MainWindow::skillUpdate(QListWidgetItem *currentItem, QListWidgetItem *) {
 void MainWindow::showSkill(bool) {
     QListWidgetItem *currentItem = ui->lstSkill->currentItem();
     if (currentItem != NULL) {
-        QString currentSkill = currentItem->text();
-        QString currentGeneral = ui->lstClass->currentItem()->text();
+        QString currentSkill = currentItem->data(Qt::UserRole + 1).toString();
+        QString currentGeneral = ui->lstClass->currentItem()->data(Qt::UserRole + 1).toString();
 
         const Garbage &garbage = *Garbage::getInstance();
         const General *general = garbage.getGeneral(currentGeneral);
