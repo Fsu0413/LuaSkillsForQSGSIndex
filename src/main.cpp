@@ -3,7 +3,6 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QDir>
-#include "QMessageBox"
 
 int main(int argc, char *argv[]) {
 
@@ -29,8 +28,6 @@ int main(int argc, char *argv[]) {
                     QStringList l = line.split(QRegExp("\\s+"), QString::SkipEmptyParts);
                     if (l.length() == 2)
                         SkillTranslator::insertTranslationPair(l.first(), l.last());
-                    else
-                        QMessageBox::warning(NULL, "", line);
                 }
             }
         }
