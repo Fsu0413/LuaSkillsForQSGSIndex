@@ -6,10 +6,8 @@
 
 
 namespace SkillTranslator {
-    static QString translate(const QString &from);
-    static void insertTranslationPair(const QString &from, const QString &to);
-    
-    static QHash<QString, QString> translations;
+    QString translate(const QString &from);
+    void insertTranslationPair(const QString &from, const QString &to);
 };
 
 
