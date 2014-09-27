@@ -40,7 +40,7 @@ bool AutoUpdater::doUpdate() {
     if (!dir.exists())
         proc->start("git", QStringList() << "clone" << "https://github.com/QSanguosha-Rara/LuaSkillsForQSGSIndex" << "index");
     else
-        proc->start("git", QStringList() << "pull" << "index");
+        proc->start("git", QStringList() << "-C" << "index" << "pull");
 
     if (!proc->waitForFinished(3600000)) {
         cout << endl << "update error, killing the git process..." << endl;
@@ -51,3 +51,4 @@ bool AutoUpdater::doUpdate() {
     cout << "done." << endl;
     return true;
 }
+
