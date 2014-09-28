@@ -38,7 +38,7 @@ bool AutoUpdater::doUpdate() {
 
     QDir dir("index");
     if (!dir.exists())
-        proc->start("git", QStringList() << "clone" << "https://github.com/QSanguosha-Rara/LuaSkillsForQSGSIndex" << "index");
+        proc->start("git", QStringList() << "clone" << "https://gitcafe.com/Fsu0413/LuaSkillsForQSGSIndexTest" << "index");
     else
         proc->start("git", QStringList() << "-C" << "index" << "pull");
 
