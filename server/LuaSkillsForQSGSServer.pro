@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core
+QT       += core network
 
 QT       -= gui
 
@@ -17,8 +17,10 @@ TEMPLATE = app
 
 SOURCES += \
     src/main.cpp \
-    src/autoupdate.cpp
+    src/autoupdate.cpp \
+    src/udpcontrol.cpp
 
 HEADERS += \
-    src/autoupdate.h
+    src/autoupdate.h \
+    src/udpcontrol.h
 
