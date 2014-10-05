@@ -37,6 +37,9 @@
     <ClCompile Include="..\..\src\syntaxhighlighter.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\git.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\src\mainwindow.ui">
@@ -88,6 +91,9 @@
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\syntaxhighlighter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\git.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
