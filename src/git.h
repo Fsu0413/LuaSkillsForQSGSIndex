@@ -4,7 +4,7 @@
 namespace GitManager {
     bool clone();
     bool pull();
-    bool checkoutHead();
+    //bool checkoutHead();
 }
 
 #endif
