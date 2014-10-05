@@ -14,3 +14,7 @@ msvc[pr]1[210]0.dll
 msvc[pr]1[210]0d.dll
 git2.dll
 /git/
+libgcc_s_dw2-1.dll
+libgit2.dll
+libstdc++-6.dll
+libwinpthread-1.dll
