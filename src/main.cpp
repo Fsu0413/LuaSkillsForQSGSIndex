@@ -16,11 +16,11 @@ int main(int argc, char *argv[]) {
     translator.load("LuaSkillsForQSGSIndex.qm");
     qApp->installTranslator(&translator);
 
-    QDir d("translate");
+    QDir d("git/translations");
     if (d.exists()) {
         foreach (QString s, d.entryList()) {
             if (s.endsWith(".txt")) {
-                QFile f("translate/" + s);
+                QFile f("git/translations/" + s);
                 f.open(QIODevice::ReadOnly);
                 while (!f.atEnd()) {
                     QString line = f.readLine();

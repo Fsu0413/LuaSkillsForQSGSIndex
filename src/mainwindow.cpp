@@ -57,7 +57,7 @@ void MainWindow::showSkill(bool) {
 
             if (general != NULL) {
                 QString package = general->getPackage();
-                QString file_name = "skills/" + package + "/" + skill_owner + "_" + currentSkill + ".lua";
+                QString file_name = "git/skills/" + package + "/" + skill_owner + "_" + currentSkill + ".lua";
                 QFile file(file_name);
                 if (file.exists())
                     (new CodeDialog(file, this))->show();

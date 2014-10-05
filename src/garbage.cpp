@@ -23,7 +23,7 @@ void Garbage::destroyInstancce() {
 Garbage::Garbage() {
     setObjectName("Garbage");
 
-    QDir dir("skills");
+    QDir dir("git/skillnames");
     if (dir.exists()){
         QFileInfoList files = dir.entryInfoList(QDir::Files, QDir::Name);
         foreach (QFileInfo f, files) {
@@ -40,7 +40,7 @@ Package::Package(const QString &name, Garbage *garbage) {
     setObjectName(name);
     setParent(garbage);
 
-    QFile file("skills/" + name + ".txt");
+    QFile file("git/skillnames/" + name + ".txt");
     if (!file.exists() || !exportGenerals(file)) {
         QMessageBox::critical(NULL, tr("Error"), QString(tr("Cannot read file %1")).arg(name + ".txt"));
         delete this;
