@@ -1,14 +1,17 @@
 #include <git2.h>
 #include "git.h"
 
-void GitManager::clone() {
+bool GitManager::clone() {
     // @#$%^&*()@#$%^&*()@#$%^&*()@#$%^&*()@#$%^&*()
+    return false;
 }
 
-void GitManager::pull() {
+bool GitManager::pull() {
     // @#$%^&*()@#$%^&*()@#$%^&*()@#$%^&*()@#$%^&*()
+    return false;
 }
 
-void GitManager::checkoutHead() {
+bool GitManager::checkoutHead() {
     // @#$%^&*()@#$%^&*()@#$%^&*()@#$%^&*()@#$%^&*()
+    return false;
 }

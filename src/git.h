@@ -2,9 +2,9 @@
 #define __GIT_H__
 
 namespace GitManager {
-    void clone();
-    void pull();
-    void checkoutHead();
+    bool clone();
+    bool pull();
+    bool checkoutHead();
 }
 
 #endif
